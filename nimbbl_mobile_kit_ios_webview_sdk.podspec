@@ -20,19 +20,11 @@ Pod::Spec.new do |spec|
   # Dependencies
   spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "~> 1.0.3"
 
-  # Dynamic framework configuration
+  # Framework settings for dynamic framework
   spec.pod_target_xcconfig = {
-    "CODE_SIGNING_ALLOWED" => "NO",
-    "CODE_SIGNING_REQUIRED" => "NO",
-    "CODE_SIGNING_IDENTITY" => "",
-    "EXPANDED_CODE_SIGN_IDENTITY" => "",
     "BUILD_LIBRARY_FOR_DISTRIBUTION" => "YES",
     "SKIP_INSTALL" => "NO",
     "ENABLE_BITCODE" => "NO",
-    "COPY_PHASE_STRIP" => "NO",
-    "STRIP_INSTALLED_PRODUCT" => "NO",
-    "STRIP_STYLE" => "non-global",
-    "MACH_O_TYPE" => "mh_dylib",
     "DEFINES_MODULE" => "YES"
   }
 
