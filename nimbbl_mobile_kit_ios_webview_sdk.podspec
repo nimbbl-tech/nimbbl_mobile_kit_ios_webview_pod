@@ -43,3 +43,4 @@ Pod::Spec.new do |spec|
     "GENERATE_INFOPLIST_FILE" => "YES"
   }
 end
+  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "~> 1.0.0"
