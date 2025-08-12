@@ -9,16 +9,15 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.source       = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod.git", :tag => "#{spec.version}" }
 
-  # Use static library to avoid embedding issues
+  # Use static framework to avoid embedding issues
   spec.static_framework = true
   
-  # Static library and headers
-  spec.source_files = "static_lib/Headers/*.h"
+  # Use the original framework
+  spec.vendored_frameworks = "nimbbl_mobile_kit_ios_webview_sdk.framework"
   
-  # Library search paths and linking
+  # Framework search paths
   spec.pod_target_xcconfig = {
-    'LIBRARY_SEARCH_PATHS' => '$(PODS_ROOT)/nimbbl_mobile_kit_ios_webview_sdk/static_lib',
-    'OTHER_LDFLAGS' => '-lnimbbl_mobile_kit_ios_webview_sdk',
+    'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/nimbbl_mobile_kit_ios_webview_sdk',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 
