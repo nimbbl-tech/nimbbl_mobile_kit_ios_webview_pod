@@ -9,16 +9,39 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "13.0"
   spec.source       = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod.git", :tag => "#{spec.version}" }
 
-  # Use static framework to avoid embedding issues
+  # Use static library to avoid embedding issues
   spec.static_framework = true
   
-  # Use the original framework
-  spec.vendored_frameworks = "nimbbl_mobile_kit_ios_webview_sdk.framework"
-  
-  # Framework search paths
+  # Static library and headers
+  spec.source_files = "static_lib/Headers/*.h"
+  spec.public_header_files = "static_lib/Headers/*.h"
+
+  # No source code compilation
+  spec.requires_arc = false
+
+  # Configure build settings for static library
   spec.pod_target_xcconfig = {
-    'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/nimbbl_mobile_kit_ios_webview_sdk',
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'MACH_O_TYPE' => 'staticlib',
+    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'NO',
+    'ENABLE_BITCODE' => 'NO',
+    'CODE_SIGNING_ALLOWED' => 'NO',
+    'CODE_SIGNING_REQUIRED' => 'NO',
+    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO',
+    'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO',
+    'LIBRARY_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/nimbbl_mobile_kit_ios_webview_sdk/static_lib',
+    'OTHER_LDFLAGS' => '$(inherited) -lnimbbl_mobile_kit_ios_webview_sdk'
+  }
+  
+  # User target configuration to prevent embedding
+  spec.user_target_xcconfig = {
+    'MACH_O_TYPE' => 'staticlib',
+    'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'NO',
+    'ENABLE_BITCODE' => 'NO',
+    'ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES' => 'NO',
+    'EMBEDDED_CONTENT_CONTAINS_SWIFT' => 'NO',
+    'LIBRARY_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/nimbbl_mobile_kit_ios_webview_sdk/static_lib',
+    'OTHER_LDFLAGS' => '$(inherited) -lnimbbl_mobile_kit_ios_webview_sdk'
   }
 
   spec.swift_version = "5.0"
