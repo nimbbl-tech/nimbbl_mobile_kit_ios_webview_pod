@@ -30,6 +30,6 @@ Pod::Spec.new do |spec|
 
   # Add user target xcconfig for additional compatibility
   spec.user_target_xcconfig = {
-    "GENERATE_INFOPLIST_FILE" => "YES"
+    # Removed GENERATE_INFOPLIST_FILE to avoid conflicts with project settings
   }
 end
