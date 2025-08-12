@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "nimbbl_mobile_kit_ios_webview_sdk"
-  spec.version      = "1.0.6"
+  spec.version      = "1.0.7"
   spec.summary      = "Nimbbl WebView SDK for iOS"
   spec.description  = "WebView SDK for Nimbbl payment integration on iOS. This SDK provides a WebView-based checkout experience for payment processing."
   spec.homepage     = "https://nimbbl.biz"
@@ -26,6 +26,6 @@ Pod::Spec.new do |spec|
   spec.framework    = "UIKit"
   spec.framework    = "WebKit"
 
-  # Dependencies
-  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "1.0.7"
+  # Dependencies - use version 1.0.4 of core API SDK which was distributed as a framework
+  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "1.0.4"
 end
