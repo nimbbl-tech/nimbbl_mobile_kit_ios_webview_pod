@@ -28,5 +28,5 @@ Pod::Spec.new do |spec|
   spec.framework    = "WebKit"
 
   # Dependencies
-  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "~> 1.0.7"
+  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "1.0.7"
 end
