@@ -12,6 +12,24 @@ import _SwiftConcurrencyShims
 import os.log
 import nimbbl_mobile_kit_ios_core_api_sdk
 import os
+@objc public protocol NimbblCheckoutSDKDelegate {
+  @objc func onPaymentSuccess(_ response: [Swift.AnyHashable : Any])
+  @objc func onError(_ error: [Swift.AnyHashable : Any])
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCheckoutSDK : ObjectiveC.NSObject {
+  public static let shared: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK
+  @objc weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?
+  public var environmentUrl: Swift.String? {
+    get
+    set
+  }
+  @objc public func handleDeviceBackButtonPress()
+  public func checkout(from viewController: UIKit.UIViewController, options: nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions)
+  public func createOrder(amount: Swift.Double, currency: Swift.String, orderLineItems: [[Swift.String : Any]], user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
+  public static func getOrderID(from token: Swift.String) -> Swift.String
+  public static func getSubMerchantID(from token: Swift.String) -> Swift.String
+  @objc deinit
+}
 public protocol NimbblCheckoutWebViewDelegate : AnyObject {
   func nimbblCheckoutWebViewDidSucceed(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, payload: [Swift.String : Any])
   func nimbblCheckoutWebViewDidFail(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, error: Swift.String)
@@ -42,23 +60,5 @@ public protocol NimbblCheckoutWebViewDelegate : AnyObject {
   public static func debugLog(_ message: Swift.String)
   public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
   public static func warningLog(tag: Swift.String, message: Swift.String)
-  @objc deinit
-}
-@objc public protocol NimbblCheckoutSDKDelegate {
-  @objc func onPaymentSuccess(_ response: [Swift.AnyHashable : Any])
-  @objc func onError(_ error: [Swift.AnyHashable : Any])
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCheckoutSDK : ObjectiveC.NSObject {
-  public static let shared: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK
-  @objc weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?
-  public var environmentUrl: Swift.String? {
-    get
-    set
-  }
-  @objc public func handleDeviceBackButtonPress()
-  public func checkout(from viewController: UIKit.UIViewController, options: nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions)
-  public func createOrder(amount: Swift.Double, currency: Swift.String, orderLineItems: [[Swift.String : Any]], user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
-  public static func getOrderID(from token: Swift.String) -> Swift.String
-  public static func getSubMerchantID(from token: Swift.String) -> Swift.String
   @objc deinit
 }
