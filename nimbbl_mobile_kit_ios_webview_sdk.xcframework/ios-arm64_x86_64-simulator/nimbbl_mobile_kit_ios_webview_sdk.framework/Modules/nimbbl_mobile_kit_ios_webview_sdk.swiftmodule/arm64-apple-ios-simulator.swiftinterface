@@ -12,33 +12,15 @@ import _SwiftConcurrencyShims
 import os.log
 import nimbbl_mobile_kit_ios_core_api_sdk
 import os
-@objc public protocol NimbblCheckoutSDKDelegate {
-  @objc func onPaymentSuccess(_ response: [Swift.AnyHashable : Any])
-  @objc func onError(_ error: [Swift.AnyHashable : Any])
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCheckoutSDK : ObjectiveC.NSObject {
-  public static let shared: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK
-  @objc weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?
-  public var environmentUrl: Swift.String? {
-    get
-    set
-  }
-  @objc public func handleDeviceBackButtonPress()
-  public func checkout(from viewController: UIKit.UIViewController, options: nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions)
-  public func createOrder(amount: Swift.Double, currency: Swift.String, orderLineItems: [[Swift.String : Any]], user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
-  public static func getOrderID(from token: Swift.String) -> Swift.String
-  public static func getSubMerchantID(from token: Swift.String) -> Swift.String
-  @objc deinit
-}
 public protocol NimbblCheckoutWebViewDelegate : AnyObject {
   func nimbblCheckoutWebViewDidSucceed(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, payload: [Swift.String : Any])
   func nimbblCheckoutWebViewDidFail(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, error: Swift.String)
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class NimbblCheckoutWebView : UIKit.UIViewController, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate, WebKit.WKScriptMessageHandler {
-  @_Concurrency.MainActor @preconcurrency public var options: nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions
+  @_Concurrency.MainActor @preconcurrency public var options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions
   @_Concurrency.MainActor @preconcurrency public var upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
   @_Concurrency.MainActor @preconcurrency weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebViewDelegate)?
-  @_Concurrency.MainActor @preconcurrency public init(options: nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions, upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions, upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]? = nil)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency public func handleDeviceBackButtonPress()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
@@ -60,5 +42,25 @@ public protocol NimbblCheckoutWebViewDelegate : AnyObject {
   public static func debugLog(_ message: Swift.String)
   public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
   public static func warningLog(tag: Swift.String, message: Swift.String)
+  @objc deinit
+}
+public typealias NimbblCheckoutOptions = nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions
+@objc public protocol NimbblCheckoutSDKDelegate {
+  @objc func onPaymentSuccess(_ response: [Swift.AnyHashable : Any])
+  @objc func onError(_ error: [Swift.AnyHashable : Any])
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCheckoutSDK : ObjectiveC.NSObject {
+  public static let shared: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK
+  @objc weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?
+  public var environmentUrl: Swift.String? {
+    get
+    set
+  }
+  @objc public func handleDeviceBackButtonPress()
+  public func checkout(from viewController: UIKit.UIViewController, options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions)
+  public func createOrder(amount: Swift.Double, currency: Swift.String, orderLineItems: [[Swift.String : Any]], user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
+  public func createShopOrder(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
+  public static func getOrderID(from token: Swift.String) -> Swift.String
+  public static func getSubMerchantID(from token: Swift.String) -> Swift.String
   @objc deinit
 }
