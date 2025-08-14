@@ -12,6 +12,13 @@ import _SwiftConcurrencyShims
 import os.log
 import nimbbl_mobile_kit_ios_core_api_sdk
 import os
+@_hasMissingDesignatedInitializers public class LogUtil {
+  public static func debugLog(tag: Swift.String, message: Swift.String)
+  public static func debugLog(_ message: Swift.String)
+  public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  public static func warningLog(tag: Swift.String, message: Swift.String)
+  @objc deinit
+}
 public typealias NimbblCheckoutOptions = nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions
 @objc public protocol NimbblCheckoutSDKDelegate {
   @objc func onPaymentSuccess(_ response: [Swift.AnyHashable : Any])
@@ -56,11 +63,4 @@ public protocol NimbblCheckoutWebViewDelegate : AnyObject {
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
-}
-@_hasMissingDesignatedInitializers public class LogUtil {
-  public static func debugLog(tag: Swift.String, message: Swift.String)
-  public static func debugLog(_ message: Swift.String)
-  public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
-  public static func warningLog(tag: Swift.String, message: Swift.String)
-  @objc deinit
 }
