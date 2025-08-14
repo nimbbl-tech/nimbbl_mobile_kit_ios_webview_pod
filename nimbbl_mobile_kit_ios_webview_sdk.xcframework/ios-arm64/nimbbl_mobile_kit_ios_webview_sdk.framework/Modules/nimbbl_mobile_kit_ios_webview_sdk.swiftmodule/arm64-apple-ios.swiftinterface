@@ -12,13 +12,6 @@ import _SwiftConcurrencyShims
 import os.log
 import nimbbl_mobile_kit_ios_core_api_sdk
 import os
-@_hasMissingDesignatedInitializers public class LogUtil {
-  public static func debugLog(tag: Swift.String, message: Swift.String)
-  public static func debugLog(_ message: Swift.String)
-  public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
-  public static func warningLog(tag: Swift.String, message: Swift.String)
-  @objc deinit
-}
 public protocol NimbblCheckoutWebViewDelegate : AnyObject {
   func nimbblCheckoutWebViewDidSucceed(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, payload: [Swift.String : Any])
   func nimbblCheckoutWebViewDidFail(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, error: Swift.String)
@@ -62,5 +55,12 @@ public typealias NimbblCheckoutOptions = nimbbl_mobile_kit_ios_core_api_sdk.Nimb
   public func createShopOrder(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
   public static func getOrderID(from token: Swift.String) -> Swift.String
   public static func getSubMerchantID(from token: Swift.String) -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class LogUtil {
+  public static func debugLog(tag: Swift.String, message: Swift.String)
+  public static func debugLog(_ message: Swift.String)
+  public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  public static func warningLog(tag: Swift.String, message: Swift.String)
   @objc deinit
 }
