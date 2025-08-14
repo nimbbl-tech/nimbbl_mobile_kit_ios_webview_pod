@@ -6,1068 +6,6 @@
     "children": [
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "os.log",
-        "printedName": "os.log",
-        "declKind": "Import",
-        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "LogUtil",
-        "printedName": "LogUtil",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "debugLog",
-            "printedName": "debugLog(tag:message:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05debugG03tag7messageySS_SStFZ",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05debugG03tag7messageySS_SStFZ",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "debugLog",
-            "printedName": "debugLog(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05debugG0yySSFZ",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05debugG0yySSFZ",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "errorLog",
-            "printedName": "errorLog(tag:message:error:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(any Swift.Error)?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Error",
-                    "printedName": "any Swift.Error",
-                    "usr": "s:s5ErrorP"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05errorG03tag7message0I0ySS_SSs5Error_pSgtFZ",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05errorG03tag7message0I0ySS_SSs5Error_pSgtFZ",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "warningLog",
-            "printedName": "warningLog(tag:message:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC07warningG03tag7messageySS_SStFZ",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC07warningG03tag7messageySS_SStFZ",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC",
-        "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC",
-        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "hasMissingDesignatedInitializers": true,
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
-      },
-      {
-        "kind": "Import",
-        "name": "nimbbl_mobile_kit_ios_core_api_sdk",
-        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk",
-        "declKind": "Import",
-        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "NimbblCheckoutSDKDelegate",
-        "printedName": "NimbblCheckoutSDKDelegate",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "onPaymentSuccess",
-            "printedName": "onPaymentSuccess(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.AnyHashable : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AnyHashable",
-                    "printedName": "Swift.AnyHashable",
-                    "usr": "s:s11AnyHashableV"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate(im)onPaymentSuccess:",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP16onPaymentSuccessyySDys11AnyHashableVypGF",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
-            "sugared_genericSig": "<Self where Self : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onError",
-            "printedName": "onError(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.AnyHashable : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AnyHashable",
-                    "printedName": "Swift.AnyHashable",
-                    "usr": "s:s11AnyHashableV"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate(im)onError:",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP7onErroryySDys11AnyHashableVypGF",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
-            "sugared_genericSig": "<Self where Self : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate",
-        "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP",
-        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "NimbblCheckoutSDK",
-        "printedName": "NimbblCheckoutSDK",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "shared",
-            "printedName": "shared",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "NimbblCheckoutSDK",
-                "printedName": "nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK",
-                "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC6sharedACvpZ",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC6sharedACvpZ",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "NimbblCheckoutSDK",
-                    "printedName": "nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK",
-                    "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC6sharedACvgZ",
-                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC6sharedACvgZ",
-                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "delegate",
-            "printedName": "delegate",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "WeakStorage",
-                "printedName": "(any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(py)delegate",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvp",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "ReferenceOwnership",
-              "AccessControl",
-              "ObjC"
-            ],
-            "ownership": 1,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NimbblCheckoutSDKDelegate",
-                        "printedName": "any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate",
-                        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(im)delegate",
-                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvg",
-                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "NimbblCheckoutSDKDelegate",
-                        "printedName": "any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate",
-                        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(im)setDelegate:",
-                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvs",
-                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-                "implicit": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvM",
-                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvM",
-                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "environmentUrl",
-            "printedName": "environmentUrl",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvp",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvp",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvg",
-                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvg",
-                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvs",
-                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvs",
-                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvM",
-                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvM",
-                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "handleDeviceBackButtonPress",
-            "printedName": "handleDeviceBackButtonPress()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(im)handleDeviceBackButtonPress",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC27handleDeviceBackButtonPressyyF",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "checkout",
-            "printedName": "checkout(from:options:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIViewController",
-                "printedName": "UIKit.UIViewController",
-                "usr": "c:objc(cs)UIViewController"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NimbblCheckoutOptions",
-                "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions",
-                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk21NimbblCheckoutOptionsV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8checkout4from7optionsySo16UIViewControllerC_0a1_b1_c1_d10_core_api_F00gH7OptionsVtF",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8checkout4from7optionsySo16UIViewControllerC_0a1_b1_c1_d10_core_api_F00gH7OptionsVtF",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "createOrder",
-            "printedName": "createOrder(amount:currency:orderLineItems:user:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[[Swift.String : Any]]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "usr": "s:Sa"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "OrderResponse",
-                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse",
-                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13OrderResponseV"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "any Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC11createOrder6amount8currency14orderLineItems4user10completionySd_SSSaySDySSypGGAJSgys6ResultOy0a1_b1_c1_d10_core_api_F00K8ResponseVs5Error_pGctF",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC11createOrder6amount8currency14orderLineItems4user10completionySd_SSSaySDySSypGGAJSgys6ResultOy0a1_b1_c1_d10_core_api_F00K8ResponseVs5Error_pGctF",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "createShopOrder",
-            "printedName": "createShopOrder(currency:amount:productId:orderLineItems:checkoutExperience:paymentMode:subPaymentMode:user:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "[Swift.String : Any]?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Any]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:SD"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.Result<[Swift.String : Any], any Swift.Error>) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Result",
-                    "printedName": "Swift.Result<[Swift.String : Any], any Swift.Error>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Dictionary",
-                        "printedName": "[Swift.String : Any]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ProtocolComposition",
-                            "printedName": "Any"
-                          }
-                        ],
-                        "usr": "s:SD"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Error",
-                        "printedName": "any Swift.Error",
-                        "usr": "s:s5ErrorP"
-                      }
-                    ],
-                    "usr": "s:s6ResultO"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC15createShopOrder8currency6amount9productId14orderLineItems18checkoutExperience11paymentMode010subPaymentW04user10completionySS_S2SSbS3SSDySSypGSgys6ResultOyANs5Error_pGctF",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC15createShopOrder8currency6amount9productId14orderLineItems18checkoutExperience11paymentMode010subPaymentW04user10completionySS_S2SSbS3SSDySSypGSgys6ResultOyANs5Error_pGctF",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getOrderID",
-            "printedName": "getOrderID(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC10getOrderID4fromS2S_tFZ",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC10getOrderID4fromS2S_tFZ",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getSubMerchantID",
-            "printedName": "getSubMerchantID(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC16getSubMerchantID4fromS2S_tFZ",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC16getSubMerchantID4fromS2S_tFZ",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK",
-        "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC",
-        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "hasMissingDesignatedInitializers": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -2370,6 +1308,1068 @@
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LogUtil",
+        "printedName": "LogUtil",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "debugLog",
+            "printedName": "debugLog(tag:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05debugG03tag7messageySS_SStFZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05debugG03tag7messageySS_SStFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "debugLog",
+            "printedName": "debugLog(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05debugG0yySSFZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05debugG0yySSFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "errorLog",
+            "printedName": "errorLog(tag:message:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05errorG03tag7message0I0ySS_SSs5Error_pSgtFZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC05errorG03tag7message0I0ySS_SSs5Error_pSgtFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "warningLog",
+            "printedName": "warningLog(tag:message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC07warningG03tag7messageySS_SStFZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC07warningG03tag7messageySS_SStFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC",
+        "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "nimbbl_mobile_kit_ios_core_api_sdk",
+        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NimbblCheckoutSDKDelegate",
+        "printedName": "NimbblCheckoutSDKDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onPaymentSuccess",
+            "printedName": "onPaymentSuccess(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate(im)onPaymentSuccess:",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP16onPaymentSuccessyySDys11AnyHashableVypGF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
+            "sugared_genericSig": "<Self where Self : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.AnyHashable : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyHashable",
+                    "printedName": "Swift.AnyHashable",
+                    "usr": "s:s11AnyHashableV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate(im)onError:",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP7onErroryySDys11AnyHashableVypGF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "genericSig": "<τ_0_0 where τ_0_0 : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
+            "sugared_genericSig": "<Self where Self : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate",
+        "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NimbblCheckoutSDK",
+        "printedName": "NimbblCheckoutSDK",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NimbblCheckoutSDK",
+                "printedName": "nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK",
+                "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC6sharedACvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC6sharedACvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NimbblCheckoutSDK",
+                    "printedName": "nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK",
+                    "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC6sharedACvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC6sharedACvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(py)delegate",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvp",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NimbblCheckoutSDKDelegate",
+                        "printedName": "any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate",
+                        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(im)delegate",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvg",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NimbblCheckoutSDKDelegate",
+                        "printedName": "any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate",
+                        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(im)setDelegate:",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvs",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvM",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8delegateAA0gH11SDKDelegate_pSgvM",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "environmentUrl",
+            "printedName": "environmentUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvp",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvp",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvg",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvg",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvs",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvs",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvM",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC14environmentUrlSSSgvM",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "handleDeviceBackButtonPress",
+            "printedName": "handleDeviceBackButtonPress()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(im)handleDeviceBackButtonPress",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC27handleDeviceBackButtonPressyyF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkout",
+            "printedName": "checkout(from:options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NimbblCheckoutOptions",
+                "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions",
+                "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk21NimbblCheckoutOptionsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8checkout4from7optionsySo16UIViewControllerC_0a1_b1_c1_d10_core_api_F00gH7OptionsVtF",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC8checkout4from7optionsySo16UIViewControllerC_0a1_b1_c1_d10_core_api_F00gH7OptionsVtF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createOrder",
+            "printedName": "createOrder(amount:currency:orderLineItems:user:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OrderResponse",
+                        "printedName": "nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse",
+                        "usr": "s:34nimbbl_mobile_kit_ios_core_api_sdk13OrderResponseV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC11createOrder6amount8currency14orderLineItems4user10completionySd_SSSaySDySSypGGAJSgys6ResultOy0a1_b1_c1_d10_core_api_F00K8ResponseVs5Error_pGctF",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC11createOrder6amount8currency14orderLineItems4user10completionySd_SSSaySDySSypGGAJSgys6ResultOy0a1_b1_c1_d10_core_api_F00K8ResponseVs5Error_pGctF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "createShopOrder",
+            "printedName": "createShopOrder(currency:amount:productId:orderLineItems:checkoutExperience:paymentMode:subPaymentMode:user:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<[Swift.String : Any], any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<[Swift.String : Any], any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC15createShopOrder8currency6amount9productId14orderLineItems18checkoutExperience11paymentMode010subPaymentW04user10completionySS_S2SSbS3SSDySSypGSgys6ResultOyANs5Error_pGctF",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC15createShopOrder8currency6amount9productId14orderLineItems18checkoutExperience11paymentMode010subPaymentW04user10completionySS_S2SSbS3SSDySSypGSgys6ResultOyANs5Error_pGctF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getOrderID",
+            "printedName": "getOrderID(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC10getOrderID4fromS2S_tFZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC10getOrderID4fromS2S_tFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSubMerchantID",
+            "printedName": "getSubMerchantID(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC16getSubMerchantID4fromS2S_tFZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC16getSubMerchantID4fromS2S_tFZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK",
+        "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       }
