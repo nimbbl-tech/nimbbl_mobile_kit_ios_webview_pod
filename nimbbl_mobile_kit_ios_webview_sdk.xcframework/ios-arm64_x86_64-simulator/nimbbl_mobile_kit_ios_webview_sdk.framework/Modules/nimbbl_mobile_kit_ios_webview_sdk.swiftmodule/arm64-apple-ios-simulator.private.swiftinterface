@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
 // swift-module-flags: -target arm64-apple-ios13-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name nimbbl_mobile_kit_ios_webview_sdk
-// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Foundation
 import Swift
 import UIKit
@@ -15,14 +15,15 @@ import os
 @_hasMissingDesignatedInitializers public class LogUtil {
   public static func debugLog(tag: Swift.String, message: Swift.String)
   public static func debugLog(_ message: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
+  #endif
   public static func warningLog(tag: Swift.String, message: Swift.String)
   @objc deinit
 }
 public typealias NimbblCheckoutOptions = nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions
 @objc public protocol NimbblCheckoutSDKDelegate {
-  @objc func onPaymentSuccess(_ response: [Swift.AnyHashable : Any])
-  @objc func onError(_ error: [Swift.AnyHashable : Any])
+  @objc func onCheckoutResponse(data: [Swift.AnyHashable : Any])
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCheckoutSDK : ObjectiveC.NSObject {
   public static let shared: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK
@@ -33,34 +34,69 @@ public typealias NimbblCheckoutOptions = nimbbl_mobile_kit_ios_core_api_sdk.Nimb
   }
   @objc public func handleDeviceBackButtonPress()
   public func checkout(from viewController: UIKit.UIViewController, options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func createOrder(amount: Swift.Double, currency: Swift.String, orderLineItems: [[Swift.String : Any]], user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<nimbbl_mobile_kit_ios_core_api_sdk.OrderResponse, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func createShopOrder(currency: Swift.String, amount: Swift.String, productId: Swift.String, orderLineItems: Swift.Bool, checkoutExperience: Swift.String, paymentMode: Swift.String, subPaymentMode: Swift.String, user: [Swift.String : Any]? = nil, completion: @escaping (Swift.Result<[Swift.String : Any], any Swift.Error>) -> Swift.Void)
+  #endif
   public static func getOrderID(from token: Swift.String) -> Swift.String
   public static func getSubMerchantID(from token: Swift.String) -> Swift.String
   @objc deinit
 }
 public protocol NimbblCheckoutWebViewDelegate : AnyObject {
   func nimbblCheckoutWebViewDidSucceed(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, payload: [Swift.String : Any])
-  func nimbblCheckoutWebViewDidFail(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, error: Swift.String)
+  func nimbblCheckoutWebViewDidFail(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, payload: [Swift.String : Any])
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class NimbblCheckoutWebView : UIKit.UIViewController, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate, WebKit.WKScriptMessageHandler {
   @_Concurrency.MainActor @preconcurrency public var options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions
   @_Concurrency.MainActor @preconcurrency public var upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
   @_Concurrency.MainActor @preconcurrency weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebViewDelegate)?
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions, upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency public func handleDeviceBackButtonPress()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
   @objc deinit
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+public struct SDKVersion {
+  public static let version: Swift.String
+  public static let versionName: Swift.String
+  public static let versionCode: Swift.Int
+  public static let buildDate: Swift.String
+  public static let buildType: Swift.String
+  public static let majorVersion: Swift.Int
+  public static let minorVersion: Swift.Int
+  public static let patchVersion: Swift.Int
+  public static let minIOSVersion: Swift.String
+  public static let targetIOSVersion: Swift.String
+  public static let swiftVersion: Swift.String
+  public static let sdkName: Swift.String
+  public static let sdkDescription: Swift.String
+  public static let platform: Swift.String
+  public static let requiredCoreAPISDKVersion: Swift.String
 }

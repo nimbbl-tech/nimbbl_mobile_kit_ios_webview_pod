@@ -226,8 +226,8 @@
         "children": [
           {
             "kind": "Function",
-            "name": "onPaymentSuccess",
-            "printedName": "onPaymentSuccess(_:)",
+            "name": "onCheckoutResponse",
+            "printedName": "onCheckoutResponse(data:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -255,51 +255,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate(im)onPaymentSuccess:",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP16onPaymentSuccessyySDys11AnyHashableVypGF",
-            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
-            "genericSig": "<τ_0_0 where τ_0_0 : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
-            "sugared_genericSig": "<Self where Self : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onError",
-            "printedName": "onError(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.AnyHashable : Any]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AnyHashable",
-                    "printedName": "Swift.AnyHashable",
-                    "usr": "s:s11AnyHashableV"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ProtocolComposition",
-                    "printedName": "Any"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate(im)onError:",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP7onErroryySDys11AnyHashableVypGF",
+            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(pl)NimbblCheckoutSDKDelegate(im)onCheckoutResponseWithData:",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk25NimbblCheckoutSDKDelegateP02onH8Response4dataySDys11AnyHashableVypG_tF",
             "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
             "genericSig": "<τ_0_0 where τ_0_0 : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
             "sugared_genericSig": "<Self where Self : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate>",
@@ -1141,7 +1098,7 @@
           {
             "kind": "Function",
             "name": "nimbblCheckoutWebViewDidFail",
-            "printedName": "nimbblCheckoutWebViewDidFail(_:error:)",
+            "printedName": "nimbblCheckoutWebViewDidFail(_:payload:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1156,14 +1113,27 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
               }
             ],
             "declKind": "Func",
-            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk29NimbblCheckoutWebViewDelegateP0ahiJ7DidFail_5erroryAA0ghiJ0C_SStF",
-            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk29NimbblCheckoutWebViewDelegateP0ahiJ7DidFail_5erroryAA0ghiJ0C_SStF",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk29NimbblCheckoutWebViewDelegateP0ahiJ7DidFail_7payloadyAA0ghiJ0C_SDySSypGtF",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk29NimbblCheckoutWebViewDelegateP0ahiJ7DidFail_7payloadyAA0ghiJ0C_SDySSypGtF",
             "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
             "genericSig": "<τ_0_0 where τ_0_0 : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebViewDelegate>",
             "sugared_genericSig": "<Self where Self : nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebViewDelegate>",
@@ -2372,6 +2342,767 @@
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SDKVersion",
+        "printedName": "SDKVersion",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV7versionSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV7versionSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV7versionSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV7versionSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "versionName",
+            "printedName": "versionName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV11versionNameSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV11versionNameSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV11versionNameSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV11versionNameSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "versionCode",
+            "printedName": "versionCode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV11versionCodeSivpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV11versionCodeSivpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV11versionCodeSivgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV11versionCodeSivgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "buildDate",
+            "printedName": "buildDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV9buildDateSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV9buildDateSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV9buildDateSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV9buildDateSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "buildType",
+            "printedName": "buildType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV9buildTypeSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV9buildTypeSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV9buildTypeSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV9buildTypeSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "majorVersion",
+            "printedName": "majorVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12majorVersionSivpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12majorVersionSivpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12majorVersionSivgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12majorVersionSivgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minorVersion",
+            "printedName": "minorVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12minorVersionSivpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12minorVersionSivpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12minorVersionSivgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12minorVersionSivgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "patchVersion",
+            "printedName": "patchVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12patchVersionSivpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12patchVersionSivpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12patchVersionSivgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12patchVersionSivgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minIOSVersion",
+            "printedName": "minIOSVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV13minIOSVersionSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV13minIOSVersionSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV13minIOSVersionSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV13minIOSVersionSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "targetIOSVersion",
+            "printedName": "targetIOSVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV16targetIOSVersionSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV16targetIOSVersionSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV16targetIOSVersionSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV16targetIOSVersionSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "swiftVersion",
+            "printedName": "swiftVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12swiftVersionSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12swiftVersionSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12swiftVersionSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV12swiftVersionSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkName",
+            "printedName": "sdkName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV0F4NameSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV0F4NameSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV0F4NameSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV0F4NameSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sdkDescription",
+            "printedName": "sdkDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV0F11DescriptionSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV0F11DescriptionSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV0F11DescriptionSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV0F11DescriptionSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "platform",
+            "printedName": "platform",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV8platformSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV8platformSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV8platformSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV8platformSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "requiredCoreAPISDKVersion",
+            "printedName": "requiredCoreAPISDKVersion",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV25requiredCoreAPISDKVersionSSvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV25requiredCoreAPISDKVersionSSvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV25requiredCoreAPISDKVersionSSvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV25requiredCoreAPISDKVersionSSvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV",
+        "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk10SDKVersionV",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       }
     ],
     "json_format_version": 8
@@ -2380,23 +3111,128 @@
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/NimbblCheckoutWebView.swift",
       "kind": "StringLiteral",
-      "offset": 816,
+      "offset": 825,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/NimbblCheckoutWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1035,
+      "offset": 1044,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/NimbblCheckoutWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1548,
+      "offset": 1557,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 544,
+      "length": 8,
+      "value": "\"1.0.13\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 651,
+      "length": 8,
+      "value": "\"1.0.13\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 747,
+      "length": 5,
+      "value": "10013"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 811,
+      "length": 12,
+      "value": "\"2025-09-24\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 882,
+      "length": 9,
+      "value": "\"release\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1014,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1087,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1160,
+      "length": 2,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 1289,
+      "length": 6,
+      "value": "\"13.0\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 1369,
+      "length": 6,
+      "value": "\"17.0\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 1440,
+      "length": 5,
+      "value": "\"5.0\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 1536,
+      "length": 20,
+      "value": "\"Nimbbl WebView SDK\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 1625,
+      "length": 58,
+      "value": "\"WebView SDK for Nimbbl payments, depends on Core API SDK\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 1743,
+      "length": 5,
+      "value": "\"iOS\""
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
+      "kind": "StringLiteral",
+      "offset": 1875,
+      "length": 8,
+      "value": "\"1.5.10\""
     }
   ]
 }
