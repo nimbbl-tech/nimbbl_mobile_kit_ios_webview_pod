@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name           = "nimbbl_mobile_kit_ios_webview_sdk"
-  spec.version        = "2.0.1"
+  spec.version        = "2.0.2"
   spec.summary        = "Nimbbl WebView SDK for iOS"
   spec.description    = "WebView SDK for Nimbbl payments, depends on Core API SDK"
   spec.homepage       = "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod"
