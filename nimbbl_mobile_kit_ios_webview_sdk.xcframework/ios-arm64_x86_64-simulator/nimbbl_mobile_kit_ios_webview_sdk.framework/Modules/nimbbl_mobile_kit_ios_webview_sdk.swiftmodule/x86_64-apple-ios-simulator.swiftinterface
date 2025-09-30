@@ -13,6 +13,7 @@ import os.log
 import nimbbl_mobile_kit_ios_core_api_sdk
 import os
 @_hasMissingDesignatedInitializers public class LogUtil {
+  public static var isDebugEnabled: Swift.Bool
   public static func debugLog(tag: Swift.String, message: Swift.String)
   public static func debugLog(_ message: Swift.String)
   #if compiler(>=5.3) && $NonescapableTypes
@@ -82,6 +83,16 @@ public protocol NimbblCheckoutWebViewDelegate : AnyObject {
   @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
   #endif
   @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class NimbblShimmerView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency public func startShimmerAnimation()
+  @_Concurrency.MainActor @preconcurrency public func stopShimmerAnimation()
+  @_Concurrency.MainActor @preconcurrency public func showShimmer()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func hideShimmer(completion: (() -> Swift.Void)? = nil)
+  #endif
+  @objc deinit
 }
 public struct SDKVersion {
   public static let version: Swift.String

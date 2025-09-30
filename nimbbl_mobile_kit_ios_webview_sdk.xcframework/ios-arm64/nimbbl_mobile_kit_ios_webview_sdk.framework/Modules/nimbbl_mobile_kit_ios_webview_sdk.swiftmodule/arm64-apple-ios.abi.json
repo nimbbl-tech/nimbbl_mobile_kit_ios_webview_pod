@@ -27,6 +27,107 @@
         "printedName": "LogUtil",
         "children": [
           {
+            "kind": "Var",
+            "name": "isDebugEnabled",
+            "printedName": "isDebugEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC14isDebugEnabledSbvpZ",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC14isDebugEnabledSbvpZ",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC14isDebugEnabledSbvgZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC14isDebugEnabledSbvgZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC14isDebugEnabledSbvsZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC14isDebugEnabledSbvsZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC14isDebugEnabledSbvMZ",
+                "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk7LogUtilC14isDebugEnabledSbvMZ",
+                "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "debugLog",
             "printedName": "debugLog(tag:message:)",
@@ -56,7 +157,8 @@
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -2345,6 +2447,285 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NimbblShimmerView",
+        "printedName": "NimbblShimmerView",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NimbblShimmerView",
+                "printedName": "nimbbl_mobile_kit_ios_webview_sdk.NimbblShimmerView",
+                "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblShimmerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblShimmerView(im)initWithFrame:",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "overriding": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "startShimmerAnimation",
+            "printedName": "startShimmerAnimation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC05startH9AnimationyyF",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC05startH9AnimationyyF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopShimmerAnimation",
+            "printedName": "stopShimmerAnimation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC04stopH9AnimationyyF",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC04stopH9AnimationyyF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showShimmer",
+            "printedName": "showShimmer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC04showH0yyF",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC04showH0yyF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hideShimmer",
+            "printedName": "hideShimmer(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC04hideH010completionyyycSg_tF",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC04hideH010completionyyycSg_tF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblShimmerView",
+        "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblShimmerViewC",
+        "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -3109,6 +3490,13 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/LogUtil.swift",
+      "kind": "BooleanLiteral",
+      "offset": 650,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/NimbblCheckoutWebView.swift",
       "kind": "StringLiteral",
       "offset": 825,
@@ -3125,114 +3513,128 @@
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/NimbblCheckoutWebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1557,
+      "offset": 1607,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/NimbblShimmerView.swift",
+      "kind": "Array",
+      "offset": 466,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/NimbblShimmerView.swift",
+      "kind": "Array",
+      "offset": 512,
+      "length": 2,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 544,
-      "length": 8,
-      "value": "\"1.0.13\""
+      "length": 7,
+      "value": "\"2.0.5\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 651,
-      "length": 8,
-      "value": "\"1.0.13\""
+      "offset": 650,
+      "length": 7,
+      "value": "\"2.0.5\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 747,
+      "offset": 745,
       "length": 5,
-      "value": "10013"
+      "value": "20005"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 811,
+      "offset": 809,
       "length": 12,
-      "value": "\"2025-09-24\""
+      "value": "\"2025-09-30\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 882,
+      "offset": 880,
       "length": 9,
       "value": "\"release\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1014,
+      "offset": 1012,
       "length": 1,
-      "value": "1"
+      "value": "2"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1087,
+      "offset": 1085,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1160,
-      "length": 2,
-      "value": "13"
+      "offset": 1158,
+      "length": 1,
+      "value": "5"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1289,
+      "offset": 1286,
       "length": 6,
       "value": "\"13.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1369,
+      "offset": 1366,
       "length": 6,
       "value": "\"17.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1440,
+      "offset": 1437,
       "length": 5,
       "value": "\"5.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1536,
+      "offset": 1533,
       "length": 20,
       "value": "\"Nimbbl WebView SDK\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1625,
+      "offset": 1622,
       "length": 58,
       "value": "\"WebView SDK for Nimbbl payments, depends on Core API SDK\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1743,
+      "offset": 1740,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1875,
-      "length": 8,
-      "value": "\"1.5.10\""
+      "offset": 1872,
+      "length": 31,
+      "value": "\"2.0.3-SNAPSHOT-20250926173637\""
     }
   ]
 }
