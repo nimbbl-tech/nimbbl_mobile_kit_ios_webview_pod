@@ -676,6 +676,44 @@
           },
           {
             "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize(appCode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@nimbbl_mobile_kit_ios_webview_sdk@objc(cs)NimbblCheckoutSDK(im)initializeWithAppCode:",
+            "mangledName": "$s33nimbbl_mobile_kit_ios_webview_sdk17NimbblCheckoutSDKC10initialize7appCodeySSSg_tF",
+            "moduleName": "nimbbl_mobile_kit_ios_webview_sdk",
+            "objc_name": "initializeWithAppCode:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "handleDeviceBackButtonPress",
             "printedName": "handleDeviceBackButtonPress()",
             "children": [
@@ -3536,28 +3574,28 @@
       "kind": "StringLiteral",
       "offset": 544,
       "length": 7,
-      "value": "\"2.0.5\""
+      "value": "\"2.0.7\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 650,
       "length": 7,
-      "value": "\"2.0.5\""
+      "value": "\"2.0.7\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
       "offset": 745,
       "length": 5,
-      "value": "20005"
+      "value": "20007"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 809,
       "length": 12,
-      "value": "\"2025-09-30\""
+      "value": "\"2025-10-23\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
@@ -3585,7 +3623,7 @@
       "kind": "IntegerLiteral",
       "offset": 1158,
       "length": 1,
-      "value": "5"
+      "value": "7"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
@@ -3633,8 +3671,8 @@
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 1872,
-      "length": 31,
-      "value": "\"2.0.3-SNAPSHOT-20250926173637\""
+      "length": 7,
+      "value": "\"2.0.5\""
     }
   ]
 }

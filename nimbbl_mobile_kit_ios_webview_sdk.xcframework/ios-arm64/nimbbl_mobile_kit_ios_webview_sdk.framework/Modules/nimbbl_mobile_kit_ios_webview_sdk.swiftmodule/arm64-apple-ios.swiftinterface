@@ -33,6 +33,9 @@ public typealias NimbblCheckoutOptions = nimbbl_mobile_kit_ios_core_api_sdk.Nimb
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func initialize(appCode: Swift.String? = nil)
+  #endif
   @objc public func handleDeviceBackButtonPress()
   public func checkout(from viewController: UIKit.UIViewController, options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions)
   #if compiler(>=5.3) && $NonescapableTypes
