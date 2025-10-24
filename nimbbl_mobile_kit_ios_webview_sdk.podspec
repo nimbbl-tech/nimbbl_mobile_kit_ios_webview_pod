@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name           = "nimbbl_mobile_kit_ios_webview_sdk"
-  spec.version        = "2.0.7"
+  spec.version        = "2.0.8"
   spec.summary        = "Nimbbl WebView SDK for iOS"
   spec.description    = "WebView SDK for Nimbbl payments, depends on Core API SDK"
   spec.homepage       = "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod"
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "nimbbl_mobile_kit_ios_webview_sdk.xcframework"
   
   # Dependency on core API SDK
-  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "~> 2.0.7"
+  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "~> 2.0.9"
   spec.frameworks     = ["Foundation", "UIKit", "WebKit"]
   spec.static_framework = true
   spec.pod_target_xcconfig = { 'CODE_SIGNING_ALLOWED' => 'NO' }
