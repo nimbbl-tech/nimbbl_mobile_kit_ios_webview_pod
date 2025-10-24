@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "nimbbl_mobile_kit_ios_webview_sdk.xcframework"
   
   # Dependency on core API SDK
-  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "~> 2.0.9"
+  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "~> 2.0.7"
   spec.frameworks     = ["Foundation", "UIKit", "WebKit"]
   spec.static_framework = true
   spec.pod_target_xcconfig = { 'CODE_SIGNING_ALLOWED' => 'NO' }
