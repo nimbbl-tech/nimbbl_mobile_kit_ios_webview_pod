@@ -14,13 +14,13 @@ FOUNDATION_EXPORT double nimbbl_mobile_kit_ios_webview_sdkVersionNumber;
 //! Project version string for nimbbl_mobile_kit_ios_webview_sdk.
 FOUNDATION_EXPORT const unsigned char nimbbl_mobile_kit_ios_webview_sdkVersionString[];
 
-// This is an umbrella header for the nimbbl_mobile_kit_ios_webview_sdk framework
-// All public Swift classes and protocols are automatically exposed through this header
-// when the framework is imported in Swift code.
+// Import Swift classes for Objective-C compatibility
+// Note: Swift classes are automatically bridged when imported in Swift code
+// This header is primarily for Objective-C compatibility and module resolution
 
-// The framework provides:
+// Forward declarations for Swift classes (automatically available in Swift)
 // - NimbblCheckoutSDK: Main SDK class
-// - NimbblCheckoutSDKDelegate: Delegate protocol
+// - NimbblCheckoutSDKDelegate: Delegate protocol  
 // - NimbblCheckoutOptions: Checkout options (re-exported from core API SDK)
 // - NimbblCheckoutWebView: WebView implementation
 // - LogUtil: Logging utilities

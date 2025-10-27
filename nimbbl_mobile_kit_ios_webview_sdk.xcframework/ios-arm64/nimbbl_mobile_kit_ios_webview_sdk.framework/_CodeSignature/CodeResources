@@ -10,11 +10,11 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		9v/WagV/j1MjARzXOZVE7pVyY3U=
+		bvLOICIXKjyvkvHrYWl8Brz5Mz8=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		GHQxw5tkfvNj5N0aY+JF2DHKERw=
+		2fL65ju84fMaVvRMGADWRSBMa0Y=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		4gOIeRFr4wdwCrFiAsFLMpir1UI=
+		HVRI8M7TQhcnm3deCB+v5N0O7ZU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -39,14 +39,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hdk9OyVCAIndzF00BFzIMv6LZhTZBEu2D3bwXKsWbL4=
+			27EyVYldKMWJH4DCYjh2Ap8JEenabL8psOIhZs124m0=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZDJW0TAQkDfF7Nhm/dwlJwRVhmmuhxZ0xEC+ix6tu0g=
+			zx5An4WWCyolgomK7B3wll+4Qr35ldfP5haWSYK5Zek=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -74,7 +74,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+qobxcnRpptx5YJ+fInsYCHifI2zMof6CyYOPUXjOmw=
+			JyEPpUUBP1jKqWjhDov+y4luXb3mvG7fWamjgiN9JsY=
 			</data>
 		</dict>
 	</dict>

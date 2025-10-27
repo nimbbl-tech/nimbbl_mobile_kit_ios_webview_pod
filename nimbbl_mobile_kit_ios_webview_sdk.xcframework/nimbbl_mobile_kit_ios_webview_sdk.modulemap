@@ -1,5 +1,4 @@
 framework module nimbbl_mobile_kit_ios_webview_sdk {
-    umbrella header "nimbbl_mobile_kit_ios_webview_sdk.h"
     export *
     module * { export * }
 }
