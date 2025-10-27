@@ -3574,21 +3574,21 @@
       "kind": "StringLiteral",
       "offset": 544,
       "length": 8,
-      "value": "\"2.0.12\""
+      "value": "\"2.0.15\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 651,
       "length": 8,
-      "value": "\"2.0.12\""
+      "value": "\"2.0.15\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
       "offset": 747,
       "length": 5,
-      "value": "20012"
+      "value": "20015"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
@@ -3623,7 +3623,7 @@
       "kind": "IntegerLiteral",
       "offset": 1160,
       "length": 2,
-      "value": "12"
+      "value": "15"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",

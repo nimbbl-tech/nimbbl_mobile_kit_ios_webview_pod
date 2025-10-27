@@ -8,9 +8,17 @@
 		<data>
 		fQyrSv6qdrhEMt+PUAek2TQzhbk=
 		</data>
+		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
+		<data>
+		V/KjTDCnlf00VXMYz575WjI4hnw=
+		</data>
+		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<data>
+		5q13b25FuCZAjUb096BMv8laNLI=
+		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		2fL65ju84fMaVvRMGADWRSBMa0Y=
+		CGMP0gwShOHl7b3pSOK/Pu5atVM=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -26,11 +34,11 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		hhz4yAtkLsT8vcioe0ORVVcN6kY=
+		GZM4KSx4A5KTt5B0ksQg0eIctl4=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		2fL65ju84fMaVvRMGADWRSBMa0Y=
+		CGMP0gwShOHl7b3pSOK/Pu5atVM=
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -46,16 +54,30 @@
 		</data>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eJeBxHJDxxvRMPYRuvt84TwchQk=
+		aAZ0wm58zQAry6wrUoOoP2Ly9bo=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pTJpwIo9+YqR2DaxkCuQqeZjo+6nDvNL3d334mlyCdU=
+			</data>
+		</dict>
+		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7iaBB+e8FDJ5ihjpgM2v+blF6aI+oGUiK9Jc3bZx0m4=
+			</data>
+		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zx5An4WWCyolgomK7B3wll+4Qr35ldfP5haWSYK5Zek=
+			VKLPLSas2FarSlQLs7HYPB7wpy1sL+7L9jFkb0XgsaE=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -83,14 +105,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			32uNIu6BZwJiaMNwvS1JVQL7r4xzTKhCYs3o6D7N5E8=
+			KhStNjvkuOCV6IKz8pYy5MzHsCDB7iFVLO8wLaPsrto=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zx5An4WWCyolgomK7B3wll+4Qr35ldfP5haWSYK5Zek=
+			VKLPLSas2FarSlQLs7HYPB7wpy1sL+7L9jFkb0XgsaE=
 			</data>
 		</dict>
 		<key>Modules/nimbbl_mobile_kit_ios_webview_sdk.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -118,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWIFGacgtIMicDdlisYF7HjJqc7pt8Ll4MQsRikpPkE=
+			JNCjo1H9QTexWIC+tUaxttS+nGfpWN7U2N+jyv3MFpU=
 			</data>
 		</dict>
 	</dict>
