@@ -14,5 +14,5 @@ FOUNDATION_EXPORT double nimbbl_mobile_kit_ios_webview_sdkVersionNumber;
 //! Project version string for nimbbl_mobile_kit_ios_webview_sdk.
 FOUNDATION_EXPORT const unsigned char nimbbl_mobile_kit_ios_webview_sdkVersionString[];
 
-// This is an umbrella header for the nimbbl_mobile_kit_ios_webview_sdk framework
-// Swift classes and protocols are automatically exposed when the framework is imported
+// Import Swift interface for Flutter compatibility
+#import "nimbbl_mobile_kit_ios_webview_sdk-Swift.h"
