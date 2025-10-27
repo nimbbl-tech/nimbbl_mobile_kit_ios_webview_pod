@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name           = "nimbbl_mobile_kit_ios_webview_sdk"
-  spec.version        = "2.0.15-alpha.3"
+  spec.version        = "2.0.15-alpha.4"
   spec.summary        = "Nimbbl WebView SDK for iOS"
   spec.description    = "WebView SDK for Nimbbl payments, depends on Core API SDK"
   spec.homepage       = "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod"
@@ -19,8 +19,8 @@ Pod::Spec.new do |spec|
   # Flutter compatibility - module map for XCFramework
   spec.module_map = "nimbbl_mobile_kit_ios_webview_sdk.modulemap"
   
-  # Dependency on core API SDK
-  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "~> 2.0.9"
+  # Dependency on core API SDK (latest published alpha version)
+  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "2.0.15-alpha.3"
   spec.frameworks     = ["Foundation", "UIKit", "WebKit"]
   spec.static_framework = true
   
