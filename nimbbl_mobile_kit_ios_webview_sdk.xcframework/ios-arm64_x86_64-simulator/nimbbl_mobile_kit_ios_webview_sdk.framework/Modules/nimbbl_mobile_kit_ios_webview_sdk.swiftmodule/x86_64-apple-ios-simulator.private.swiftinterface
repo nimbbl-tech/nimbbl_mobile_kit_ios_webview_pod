@@ -105,7 +105,7 @@ public struct SDKVersion {
   public static let buildType: Swift.String
   public static let majorVersion: Swift.Int
   public static let minorVersion: Swift.Int
-  public static let patchVersion: Swift.String
+  public static let patchVersion: Swift.Int
   public static let minIOSVersion: Swift.String
   public static let targetIOSVersion: Swift.String
   public static let swiftVersion: Swift.String
