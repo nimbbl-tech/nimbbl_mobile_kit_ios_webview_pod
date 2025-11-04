@@ -3573,104 +3573,104 @@
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 544,
-      "length": 32,
-      "value": "\"2.0.15-SNAPSHOT-20251103175127\""
+      "length": 8,
+      "value": "\"2.0.16\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 675,
-      "length": 32,
-      "value": "\"2.0.15-SNAPSHOT-20251103175127\""
+      "offset": 651,
+      "length": 8,
+      "value": "\"2.0.16\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 795,
+      "offset": 747,
       "length": 5,
-      "value": "20015"
+      "value": "20016"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 859,
+      "offset": 811,
       "length": 12,
-      "value": "\"2025-11-03\""
+      "value": "\"2025-11-04\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 930,
-      "length": 10,
-      "value": "\"snapshot\""
+      "offset": 882,
+      "length": 9,
+      "value": "\"release\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1063,
+      "offset": 1014,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1136,
+      "offset": 1087,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "IntegerLiteral",
-      "offset": 1209,
+      "offset": 1160,
       "length": 2,
-      "value": "15"
+      "value": "16"
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1338,
+      "offset": 1289,
       "length": 6,
       "value": "\"13.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1418,
+      "offset": 1369,
       "length": 6,
       "value": "\"17.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1489,
+      "offset": 1440,
       "length": 5,
       "value": "\"5.0\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1585,
+      "offset": 1536,
       "length": 20,
       "value": "\"Nimbbl WebView SDK\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1674,
+      "offset": 1625,
       "length": 58,
       "value": "\"WebView SDK for Nimbbl payments, depends on Core API SDK\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1792,
+      "offset": 1743,
       "length": 5,
       "value": "\"iOS\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/projects\/nimbbl\/kit\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
-      "offset": 1924,
+      "offset": 1875,
       "length": 8,
       "value": "\"2.0.15\""
     }
