@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name           = "nimbbl_mobile_kit_ios_webview_sdk"
-  spec.version        = "2.0.16"
+  spec.version        = "2.0.17-SNAPSHOT"
   spec.summary        = "Nimbbl WebView SDK for iOS"
   spec.description    = "WebView SDK for Nimbbl payments, depends on Core API SDK"
   spec.homepage       = "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod"
@@ -24,12 +24,11 @@ Pod::Spec.new do |spec|
     # Production release - use vendored XCFramework from git
     spec.source = { :git => "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod.git", :tag => "#{spec.version}" }
     spec.vendored_frameworks = "nimbbl_mobile_kit_ios_webview_sdk.xcframework"
-    spec.module_map = "nimbbl_mobile_kit_ios_webview_sdk.modulemap"
     spec.static_framework = true
   end
   
   # Dependency on core API SDK
-  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "2.0.15"
+  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "2.0.17-SNAPSHOT-20260313161433"
   spec.frameworks     = ["Foundation", "UIKit", "WebKit"]
   
   # Enhanced pod target configuration for Flutter compatibility
