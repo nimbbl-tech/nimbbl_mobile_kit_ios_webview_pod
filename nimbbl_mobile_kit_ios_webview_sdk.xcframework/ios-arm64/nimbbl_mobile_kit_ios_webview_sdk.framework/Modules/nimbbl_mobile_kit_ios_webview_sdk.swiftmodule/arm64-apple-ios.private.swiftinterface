@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-// swift-module-flags: -target arm64-apple-ios13 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name nimbbl_mobile_kit_ios_webview_sdk
-// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+// swift-compiler-version: Apple Swift version 6.4 effective-5.10 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -language-mode 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name nimbbl_mobile_kit_ios_webview_sdk
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.4
 import Foundation
 import Swift
 import UIKit
@@ -13,98 +13,294 @@ import os.log
 import nimbbl_mobile_kit_ios_core_api_sdk
 import os
 @_hasMissingDesignatedInitializers public class LogUtil {
-  public static var isDebugEnabled: Swift.Bool
-  public static func debugLog(tag: Swift.String, message: Swift.String)
-  public static func debugLog(_ message: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
-  public static func errorLog(tag: Swift.String, message: Swift.String, error: (any Swift.Error)? = nil)
-  #endif
-  public static func warningLog(tag: Swift.String, message: Swift.String)
+  public static var isDebugEnabled: Swift::Bool
+  public static func debugLog(tag: Swift::String, message: Swift::String)
+  public static func debugLog(_ message: Swift::String)
+  public static func errorLog(tag: Swift::String, message: Swift::String, error: (any Swift::Error)? = nil)
+  public static func warningLog(tag: Swift::String, message: Swift::String)
   @objc deinit
 }
-public typealias NimbblCheckoutOptions = nimbbl_mobile_kit_ios_core_api_sdk.NimbblCheckoutOptions
+public typealias NimbblCheckoutOptions = nimbbl_mobile_kit_ios_core_api_sdk::NimbblCheckoutOptions
 @objc public protocol NimbblCheckoutSDKDelegate {
-  @objc func onCheckoutResponse(data: [Swift.AnyHashable : Any])
+  @objc func onCheckoutResponse(data: [Swift::AnyHashable : Any])
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCheckoutSDK : ObjectiveC.NSObject {
-  public static let shared: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDK
-  @objc weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutSDKDelegate)?
-  public var environmentUrl: Swift.String? {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NimbblCheckoutSDK : ObjectiveC::NSObject {
+  public static let shared: nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutSDK
+  @objc weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutSDKDelegate)?
+  public var environmentUrl: Swift::String? {
     get
     set
   }
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc public func initialize(appCode: Swift.String? = nil)
-  #endif
+  @objc public func initialize(appCode: Swift::String? = nil)
   @objc public func handleDeviceBackButtonPress()
-  public func checkout(from viewController: UIKit.UIViewController, options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions)
-  public static func getOrderID(from token: Swift.String) -> Swift.String
-  public static func getSubMerchantID(from token: Swift.String) -> Swift.String
+  public func checkout(from viewController: UIKit::UIViewController, options: nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutOptions)
+  public static func getOrderID(from token: Swift::String) -> Swift::String
+  public static func getSubMerchantID(from token: Swift::String) -> Swift::String
+  @objc public func isCleanedUp() -> Swift::Bool
+  @objc public func cleanup()
+  @objc public func setDebugLoggingEnabled(_ enabled: Foundation::NSNumber?)
   @objc deinit
 }
 public protocol NimbblCheckoutWebViewDelegate : AnyObject {
-  func nimbblCheckoutWebViewDidSucceed(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, payload: [Swift.String : Any])
-  func nimbblCheckoutWebViewDidFail(_ controller: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebView, payload: [Swift.String : Any])
+  func nimbblCheckoutWebViewDidSucceed(_ controller: nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutWebView, payload: [Swift::String : Any])
+  func nimbblCheckoutWebViewDidFail(_ controller: nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutWebView, payload: [Swift::String : Any])
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class NimbblCheckoutWebView : UIKit.UIViewController, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate, WebKit.WKScriptMessageHandler {
-  @_Concurrency.MainActor @preconcurrency public var options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions
-  @_Concurrency.MainActor @preconcurrency public var upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]?
-  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutWebViewDelegate)?
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public init(options: nimbbl_mobile_kit_ios_webview_sdk.NimbblCheckoutOptions, upiApps: [nimbbl_mobile_kit_ios_core_api_sdk.UPIAppsVO]? = nil)
-  #endif
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor @preconcurrency public func handleDeviceBackButtonPress()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+@objc @_hasMissingDesignatedInitializers @_Concurrency::MainActor @preconcurrency public class NimbblCheckoutWebView : UIKit::UIViewController, WebKit::WKNavigationDelegate, WebKit::WKUIDelegate, WebKit::WKScriptMessageHandler {
+  @_Concurrency::MainActor @preconcurrency public var options: nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutOptions
+  @_Concurrency::MainActor @preconcurrency public var upiApps: [nimbbl_mobile_kit_ios_core_api_sdk::UPIAppsVO]?
+  @_Concurrency::MainActor @preconcurrency weak public var delegate: (any nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutWebViewDelegate)?
+  @_Concurrency::MainActor @preconcurrency public init(options: nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutOptions, upiApps: [nimbbl_mobile_kit_ios_core_api_sdk::UPIAppsVO]? = nil)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency::MainActor @preconcurrency public func handleDeviceBackButtonPress()
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift::Bool)
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift::Bool)
   @objc deinit
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
-  #endif
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency @objc public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
-  #endif
-  @_Concurrency.MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, decidePolicyFor navigationAction: WebKit::WKNavigationAction, decisionHandler: @escaping (WebKit::WKNavigationActionPolicy) -> Swift::Void)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, didStartProvisionalNavigation navigation: WebKit::WKNavigation!)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, didCommit navigation: WebKit::WKNavigation!)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, didFinish navigation: WebKit::WKNavigation!)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, didFail navigation: WebKit::WKNavigation!, withError error: any Swift::Error)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, didFailProvisionalNavigation navigation: WebKit::WKNavigation!, withError error: any Swift::Error)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, runJavaScriptAlertPanelWithMessage message: Swift::String, initiatedByFrame frame: WebKit::WKFrameInfo, completionHandler: @escaping () -> Swift::Void)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift::String, initiatedByFrame frame: WebKit::WKFrameInfo, completionHandler: @escaping (Swift::Bool) -> Swift::Void)
+  @_Concurrency::MainActor @preconcurrency @objc public func webView(_ webView: WebKit::WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift::String, defaultText: Swift::String?, initiatedByFrame frame: WebKit::WKFrameInfo, completionHandler: @escaping (Swift::String?) -> Swift::Void)
+  @_Concurrency::MainActor @preconcurrency @objc public func userContentController(_ userContentController: WebKit::WKUserContentController, didReceive message: WebKit::WKScriptMessage)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class NimbblShimmerView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency public func startShimmerAnimation()
-  @_Concurrency.MainActor @preconcurrency public func stopShimmerAnimation()
-  @_Concurrency.MainActor @preconcurrency public func showShimmer()
-  #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency public func hideShimmer(completion: (() -> Swift.Void)? = nil)
-  #endif
+public enum NimbblError : Swift::Error, Swift::Equatable {
+  case initFailed
+  case unknown
+  case apiUrlNull
+  case checkoutReferenceNull
+  case checkoutListenerNull
+  case checkoutOptionsNull
+  case checkoutTokenNull
+  case checkoutOrderIdNull
+  case checkoutSubMerchantIdNull
+  public init?(code: Swift::String)
+  public var code: Swift::String {
+    get
+  }
+  public var message: Swift::String {
+    get
+  }
+  public var nimbblErrorCode: Swift::String {
+    get
+  }
+  public func asDelegatePayload() -> [Swift::AnyHashable : Any]
+  public func asNSError() -> Foundation::NSError
+  public static func == (a: nimbbl_mobile_kit_ios_webview_sdk::NimbblError, b: nimbbl_mobile_kit_ios_webview_sdk::NimbblError) -> Swift::Bool
+  public func hash(into hasher: inout Swift::Hasher)
+  public var hashValue: Swift::Int {
+    get
+  }
+}
+@objc public class NimbblErrorObjC : ObjectiveC::NSObject {
+  @objc final public let code: Swift::String
+  @objc final public let message: Swift::String
+  @objc final public let nimbblErrorCode: Swift::String
+  @objc public init(code: Swift::String, message: Swift::String, nimbblErrorCode: Swift::String)
+  @objc public static func from(code: Swift::String) -> nimbbl_mobile_kit_ios_webview_sdk::NimbblErrorObjC?
+  @objc public func asDelegatePayload() -> [Swift::AnyHashable : Any]
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency::MainActor @preconcurrency public class NimbblShimmerView : UIKit::UIView {
+  @_Concurrency::MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation::CGRect)
+  @_Concurrency::MainActor @preconcurrency public func startShimmerAnimation()
+  @_Concurrency::MainActor @preconcurrency public func stopShimmerAnimation()
+  @_Concurrency::MainActor @preconcurrency public func showShimmer()
+  @_Concurrency::MainActor @preconcurrency public func hideShimmer(completion: (() -> Swift::Void)? = nil)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class PaymentConstants : ObjectiveC::NSObject {
+  @objc public static let SDK_VERSION: Swift::String
+  @objc public static let ERROR_CODE_INIT_FAILED: Swift::String
+  @objc public static let ERROR_MESSAGE_INIT_FAILED: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_INIT_FAILED: Swift::String
+  @objc public static let ERROR_CODE_UNKNOWN_ERROR: Swift::String
+  @objc public static let ERROR_MESSAGE_UNKNOWN_ERROR: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_UNKNOWN_ERROR: Swift::String
+  @objc public static let ERROR_CODE_API_URL_NULL: Swift::String
+  @objc public static let ERROR_MESSAGE_API_URL_NULL: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_API_URL_NULL: Swift::String
+  @objc public static let ERROR_CODE_CHECKOUT_REFERENCE_NULL: Swift::String
+  @objc public static let ERROR_MESSAGE_CHECKOUT_REFERENCE_NULL: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_CHECKOUT_REFERENCE_NULL: Swift::String
+  @objc public static let ERROR_CODE_CHECKOUT_LISTENER_NULL: Swift::String
+  @objc public static let ERROR_MESSAGE_CHECKOUT_LISTENER_NULL: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_CHECKOUT_LISTENER_NULL: Swift::String
+  @objc public static let ERROR_CODE_CHECKOUT_OPTIONS_NULL: Swift::String
+  @objc public static let ERROR_MESSAGE_CHECKOUT_OPTIONS_NULL: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_CHECKOUT_OPTIONS_NULL: Swift::String
+  @objc public static let ERROR_CODE_CHECKOUT_TOKEN_NULL: Swift::String
+  @objc public static let ERROR_MESSAGE_CHECKOUT_TOKEN_NULL: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_CHECKOUT_TOKEN_NULL: Swift::String
+  @objc public static let ERROR_CODE_CHECKOUT_ORDER_ID_NULL: Swift::String
+  @objc public static let ERROR_MESSAGE_CHECKOUT_ORDER_ID_NULL: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_CHECKOUT_ORDER_ID_NULL: Swift::String
+  @objc public static let ERROR_CODE_CHECKOUT_SUBMERCHANT_ID_NULL: Swift::String
+  @objc public static let ERROR_MESSAGE_CHECKOUT_SUBMERCHANT_ID_NULL: Swift::String
+  @objc public static let NIMBBL_ERROR_CODE_CHECKOUT_SUBMERCHANT_ID_NULL: Swift::String
+  @objc public static let ERROR_MESSAGE_GENERIC: Swift::String
+  @objc public static let ERROR_UNABLE_TO_LAUNCH_UPI: Swift::String
+  @objc public static let SDK_ACTION_DEVICE_BACK_INITIATED: Swift::String
+  @objc public static let SDK_SOURCE_IOS: Swift::String
+  @objc public static let SDK_SOURCE_ANDROID: Swift::String
+  @objc public static let UPI_INTENT_BACK_RESPONSE_CLOSE: Swift::String
+  @objc public static let EXTRA_TAG_OPTIONS: Swift::String
+  @objc public static let EXTRA_ORDER_ID: Swift::String
+  @objc public static let EXTRA_ORDER_TOKEN: Swift::String
+  @objc public static let EXTRA_PAYMENT_DATA: Swift::String
+  @objc public static let RESPONSE_QUERY_PARAM: Swift::String
+  @objc public static let BROWSER_BACK_PARAM: Swift::String
+  @objc public static let PAYMENT_MODE_PARAM: Swift::String
+  @objc public static let BANK_CODE_PARAM: Swift::String
+  @objc public static let WALLET_CODE_PARAM: Swift::String
+  @objc public static let PAYMENT_FLOW_PARAM: Swift::String
+  @objc public static let UPI_APP_CODE_PARAM: Swift::String
+  @objc public static let EMI_CODE_PARAM: Swift::String
+  @objc public static let JAVASCRIPT_INTERFACE_NAME: Swift::String
+  @objc public static let JS_FUNCTION_POST_MESSAGE: Swift::String
+  @objc public static let JSON_PAYLOAD_FIELD: Swift::String
+  @objc public static let APP_VERSION_KEY: Swift::String
+  @objc public static let SDK_VERSION_KEY: Swift::String
+  @objc public static let JSON_KEY_ERROR: Swift::String
+  @objc public static let JSON_KEY_NIMBBL_MERCHANT_MESSAGE: Swift::String
+  @objc public static let JSON_KEY_NIMBBL_ERROR_CODE: Swift::String
+  @objc public static let JSON_KEY_NIMBBL_CONSUMER_MESSAGE: Swift::String
+  @objc public static let JSON_KEY_ERROR_REASON: Swift::String
+  @objc public static let JSON_KEY_CALLBACK_URL: Swift::String
+  @objc public static let JSON_KEY_LOCATION: Swift::String
+  @objc public static let JSON_KEY_BASE_URL: Swift::String
+  @objc public static let JSON_KEY_CURRENT_URL: Swift::String
+  @objc public static let JSON_KEY_PARAMETERS: Swift::String
+  @objc public static let JSON_KEY_UPI_APP_NAME: Swift::String
+  @objc public static let JSON_KEY_UPI_APPS: Swift::String
+  @objc public static let UPI_PARAM_URL: Swift::String
+  @objc public static let UPI_PARAM_PACKAGE_NAME: Swift::String
+  @objc public static let UPI_PARAM_TRANSACTION_ID: Swift::String
+  @objc public static let CALLBACK_MODE_MOBILE: Swift::String
+  @objc public static let PLATFORM_TYPE_IOS: Swift::String
+  @objc public static let PLATFORM_TYPE_ANDROID: Swift::String
+  @objc public static let TAG_MAIN_ACTIVITY: Swift::String
+  @objc public static let TAG_BACK_HANDLER: Swift::String
+  @objc public static let TAG_SAN: Swift::String
+  @objc public static let TAG_CHECKOUT_SDK: Swift::String
+  @objc public static let TAG_PAYMENT_HANDLER: Swift::String
+  @objc public static let TAG_PAYMENT_URL_BUILDER: Swift::String
+  @objc public static let TAG_SDK_UTILS: Swift::String
+  @objc public static let TAG_WEBVIEW: Swift::String
+  @objc public static let TAG_VALIDATION: Swift::String
+  @objc public static let TAG_UPI_MANAGER: Swift::String
+  @objc public static let UNKNOWN_ERROR: Swift::String
+  @objc public static let LOCATION_PAYMENT_URL_BUILDER_BROWSER_BACK: Swift::String
+  @objc public static let LOCATION_UPI_PARAMETER_VALIDATION: Swift::String
+  @objc public static let LOCATION_CHECKOUT_METHOD: Swift::String
+  @objc public static let LOCATION_SET_ENVIRONMENT_URL: Swift::String
+  @objc public static let EVENT_KEY_ERROR: Swift::String
+  @objc public static let EVENT_KEY_LOCATION: Swift::String
+  @objc public static let EVENT_KEY_ERROR_MESSAGE: Swift::String
+  @objc public static let EVENT_KEY_STACK_TRACE: Swift::String
+  @objc public static let EVENT_KEY_PAYMENT_DATA: Swift::String
+  @objc public static let LOG_MSG_CHECKOUT_VALIDATION_FAILED: Swift::String
+  @objc public static let LOG_MSG_ORDER_ID_VALIDATION_FAILED: Swift::String
+  @objc public static let LOG_MSG_SUBMERCHANT_ID_VALIDATION_FAILED: Swift::String
+  @objc public static let LOG_MSG_EVENT_LOGGING_FAILED_CHECKOUT: Swift::String
+  @objc public static let LOG_MSG_RECEIVER_NULL: Swift::String
+  @objc public static let LOG_MSG_BROADCAST_REG_SUCCESS: Swift::String
+  @objc public static let LOG_MSG_BROADCAST_ALREADY_REGISTERED: Swift::String
+  @objc public static let LOG_MSG_CONTEXT_NULL_REGISTER: Swift::String
+  @objc public static let LOG_MSG_ERROR_REGISTERING_RECEIVER: Swift::String
+  @objc public static let LOG_MSG_DISMISS_ACTIVITY_REF_NULL: Swift::String
+  @objc public static let LOG_MSG_ERROR_FINISHING_ACTIVITY: Swift::String
+  @objc public static let LOG_MSG_DISMISS_ACTIVITY_NULL: Swift::String
+  @objc public static let LOG_MSG_SET_ACTIVITY_REF_NULL: Swift::String
+  @objc public static let LOG_MSG_ENV_URL_NULL: Swift::String
+  @objc public static let LOG_MSG_ENV_SET: Swift::String
+  @objc public static let LOG_MSG_INIT_ACTIVITY_NULL: Swift::String
+  @objc public static let LOG_MSG_INIT_FINGERPRINT_NULL: Swift::String
+  @objc public static let LOG_MSG_EVENT_LOGGING_FAILED_FINGERPRINT: Swift::String
+  @objc public static let LOG_MSG_INIT_DEVICE_ID_NULL: Swift::String
+  @objc public static let LOG_MSG_RECEIVER_CONTEXT_NULL: Swift::String
+  @objc public static let LOG_MSG_RECEIVER_ACTION_NULL: Swift::String
+  @objc public static let LOG_MSG_RECEIVER_UNKNOWN_ACTION: Swift::String
+  @objc public static let LOG_MSG_ACTIVITY_REF_NULL: Swift::String
+  @objc public static let LOG_MSG_PAYMENT_DATA_NULL: Swift::String
+  @objc public static let LOG_MSG_LISTENER_NULL_PAYMENT: Swift::String
+  @objc public static let LOG_MSG_ERROR_PARSING_PAYMENT: Swift::String
+  @objc public static let LOG_MSG_RAW_DATA: Swift::String
+  @objc public static let LOG_MSG_JSON_STRING_EMPTY: Swift::String
+  @objc public static let LOG_MSG_ERROR_PARSING_PAYLOAD: Swift::String
+  @objc public static let LOG_MSG_JSON_PARSING_ERROR: Swift::String
+  @objc public static let LOG_MSG_UNEXPECTED_ERROR: Swift::String
+  @objc public static let LOG_MSG_SDK_ALREADY_CLEANED: Swift::String
+  @objc public static let LOG_MSG_BROADCAST_UNREG_SUCCESS: Swift::String
+  @objc public static let LOG_MSG_ERROR_UNREG_RECEIVER: Swift::String
+  @objc public static let LOG_MSG_CLEANUP_SUCCESS: Swift::String
+  @objc public static let LOG_MSG_ERROR_DURING_CLEANUP: Swift::String
+  @objc deinit
+}
+public enum NimbblURLError : Swift::Error {
+  case invalidBaseUrl(Swift::String)
+  case generatedUrlInvalid(Swift::String)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class PaymentURLBuilder : ObjectiveC::NSObject {
+  public static func buildPaymentURL(baseUrl: Swift::String, options: nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutOptions) throws -> Swift::String
+  public static func buildBrowserBackURL(baseUrl: Swift::String, currentUrl: Swift::String, orderID: Swift::String, orderToken: Swift::String?, subMerchantId: Swift::String) -> Swift::String
+  @objc public static func buildPaymentURLObjC(baseUrl: Swift::String, options: nimbbl_mobile_kit_ios_core_api_sdk::NimbblCheckoutOptionsObjC) -> Swift::String?
+  @objc public static func buildBrowserBackURLObjC(baseUrl: Swift::String, currentUrl: Swift::String, orderID: Swift::String, orderToken: Swift::String?, subMerchantId: Swift::String) -> Swift::String
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class SDKUtils : ObjectiveC::NSObject {
+  @objc public static func createErrorResponse(_ errorCode: Swift::String) -> [Swift::AnyHashable : Any]
+  @objc public static func setDebugLoggingEnabled(_ enabled: Foundation::NSNumber?)
+  @objc public static func isDebugLoggingEnabled() -> Swift::Bool
+  @objc public static func logDebug(_ tag: Swift::String, _ message: Swift::String)
+  @objc public static func logError(_ tag: Swift::String, _ message: Swift::String)
+  @objc public static func logError(_ tag: Swift::String, _ message: Swift::String, _ error: (any Swift::Error)?)
+  @objc public static func logWarning(_ tag: Swift::String, _ message: Swift::String)
+  @objc public static func getStackTrace() -> Swift::String
+  @objc public static func getStackTrace(of error: any Swift::Error) -> Swift::String
   @objc deinit
 }
 public struct SDKVersion {
-  public static let version: Swift.String
-  public static let versionName: Swift.String
-  public static let versionCode: Swift.Int
-  public static let buildDate: Swift.String
-  public static let buildType: Swift.String
-  public static let majorVersion: Swift.Int
-  public static let minorVersion: Swift.Int
-  public static let patchVersion: Swift.Int
-  public static let minIOSVersion: Swift.String
-  public static let targetIOSVersion: Swift.String
-  public static let swiftVersion: Swift.String
-  public static let sdkName: Swift.String
-  public static let sdkDescription: Swift.String
-  public static let platform: Swift.String
-  public static let requiredCoreAPISDKVersion: Swift.String
+  public static let version: Swift::String
+  public static let versionName: Swift::String
+  public static let versionCode: Swift::Int
+  public static let buildDate: Swift::String
+  public static let buildType: Swift::String
+  public static let majorVersion: Swift::Int
+  public static let minorVersion: Swift::Int
+  public static let patchVersion: Swift::Int
+  public static let minIOSVersion: Swift::String
+  public static let targetIOSVersion: Swift::String
+  public static let swiftVersion: Swift::String
+  public static let sdkName: Swift::String
+  public static let sdkDescription: Swift::String
+  public static let platform: Swift::String
+  public static let requiredCoreAPISDKVersion: Swift::String
 }
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class UPIManager : ObjectiveC::NSObject {
+  @objc public static func validateUPIParameters(parameters: Swift::String, orderId: Swift::String, token: Swift::String, subMerchantId: Swift::String) -> Swift::Bool
+  @objc deinit
+}
+public enum ValidationResult {
+  case success
+  case error(nimbbl_mobile_kit_ios_webview_sdk::NimbblError, message: Swift::String)
+  public var isSuccess: Swift::Bool {
+    get
+  }
+  public var error: nimbbl_mobile_kit_ios_webview_sdk::NimbblError? {
+    get
+  }
+  public var message: Swift::String? {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class ValidationUtils : ObjectiveC::NSObject {
+  public static func validateCheckoutPrerequisites(hostReference: Any?, listener: Any?, options: nimbbl_mobile_kit_ios_webview_sdk::NimbblCheckoutOptions?) -> nimbbl_mobile_kit_ios_webview_sdk::ValidationResult
+  public static func validateOrderId(_ orderId: Swift::String?) -> nimbbl_mobile_kit_ios_webview_sdk::ValidationResult
+  public static func validateSubMerchantId(_ subMerchantId: Swift::String?) -> nimbbl_mobile_kit_ios_webview_sdk::ValidationResult
+  @objc public static func validateCheckoutPrerequisitesObjC(hostReference: Any?, listener: Any?, options: nimbbl_mobile_kit_ios_core_api_sdk::NimbblCheckoutOptionsObjC?) -> nimbbl_mobile_kit_ios_webview_sdk::NimbblErrorObjC?
+  @objc deinit
+}
+extension nimbbl_mobile_kit_ios_webview_sdk::NimbblError : Swift::Hashable {}

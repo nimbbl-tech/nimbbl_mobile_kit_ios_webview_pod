@@ -1,63 +1,89 @@
 # Nimbbl WebView SDK for iOS
 
-A universal XCFramework for Nimbbl payment integration on iOS, providing WebView-based checkout flow for payment processing.
+A prebuilt XCFramework for Nimbbl payment integration on iOS, providing a
+WebView-based checkout flow. Distributed via **Swift Package Manager** and
+**CocoaPods**. Depends on the Nimbbl Core API SDK (resolved automatically).
 
 ## Features
 
-- **Universal XCFramework**: Supports both device (arm64) and simulator (arm64 + x86_64) architectures
-- **iOS 13.0+**: Compatible with iOS 13.0 and later
-- **Swift 5.0**: Built with latest Swift version
-- **Static Framework**: No external dependencies except Core API SDK
-- **WebView Integration**: Seamless payment flow through WebView
+- **Binary XCFramework**: device (arm64) + simulator (arm64 + x86_64)
+- **iOS 15.0+**
+- **Swift 5.0+**, built against the iOS 27 SDK
+- **WebView checkout**: seamless payment flow
+- Core API SDK pulled in automatically as a dependency
 
 ## Installation
 
-### CocoaPods
+### Swift Package Manager (recommended)
 
-Add this line to your Podfile:
+In Xcode: **File ▸ Add Package Dependencies…** and enter:
 
-```ruby
-pod "nimbbl_mobile_kit_ios_webview_sdk", "~> 1.0.9"
+```
+https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod.git
 ```
 
-Then run:
+Pick the latest version and add the **`nimbbl_mobile_kit_ios_webview_sdk`**
+library to your app target. The Core API SDK is pulled in automatically — you do
+not add it yourself.
+
+Or in `Package.swift`:
+
+```swift
+dependencies: [
+    .package(
+        url: "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod.git",
+        exact: "2.1.0-alpha.1"
+    )
+]
+```
+
+See [SPM_INTEGRATION.md](SPM_INTEGRATION.md) for details.
+
+### CocoaPods (legacy — 2.0.x only)
+
+> **2.1.0 and later are distributed via Swift Package Manager only.** CocoaPods
+> continues to serve existing **2.0.x** releases. CocoaPods Trunk goes read-only
+> on **2 Dec 2026**, after which no new pod versions can be published — new and
+> upgrading integrations should use SPM.
+
+```ruby
+pod 'nimbbl_mobile_kit_ios_webview_sdk', '~> 2.0.17'
+```
 
 ```bash
 pod install
 ```
 
-## Dependencies
-
-This SDK requires the Core API SDK:
-
-```ruby
-pod "nimbbl_mobile_kit_ios_core_api_sdk", "~> 1.3.6"
-```
+The Core API SDK is resolved transitively via the podspec dependency.
 
 ## Usage
 
 ```swift
 import nimbbl_mobile_kit_ios_webview_sdk
 
-// Initialize the SDK
-let webViewSDK = NimbblCheckoutSDK.shared
+// Set the delegate (conform to NimbblCheckoutSDKDelegate)
+NimbblCheckoutSDK.shared.delegate = self
 
-// Set delegate
-webViewSDK.delegate = self
-
-// Present checkout
-webViewSDK.presentCheckout(from: self, options: checkoutOptions)
+// Build options and start checkout
+let options = NimbblCheckoutOptions(
+    orderToken: orderToken,
+    paymentModeCode: nil,
+    bankCode: nil,
+    walletCode: nil,
+    paymentFlow: nil
+)
+NimbblCheckoutSDK.shared.checkout(from: self, options: options)
 ```
 
 ## Requirements
 
-- iOS 13.0+
-- Xcode 12.0+
+- iOS 15.0+
+- Xcode 15.0+ (built against the iOS 27 SDK)
 - Swift 5.0+
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Licensed under the MIT License — see [LICENSE](LICENSE).
 
 ## Support
 
