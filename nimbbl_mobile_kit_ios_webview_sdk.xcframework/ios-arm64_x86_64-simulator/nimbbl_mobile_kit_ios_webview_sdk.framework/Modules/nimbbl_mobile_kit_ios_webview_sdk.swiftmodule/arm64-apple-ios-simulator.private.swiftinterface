@@ -264,19 +264,6 @@ public enum NimbblURLError : Swift::Error {
 }
 public struct SDKVersion {
   public static let version: Swift::String
-  public static let versionName: Swift::String
-  public static let versionCode: Swift::Int
-  public static let buildDate: Swift::String
-  public static let buildType: Swift::String
-  public static let majorVersion: Swift::Int
-  public static let minorVersion: Swift::Int
-  public static let patchVersion: Swift::Int
-  public static let minIOSVersion: Swift::String
-  public static let targetIOSVersion: Swift::String
-  public static let swiftVersion: Swift::String
-  public static let sdkName: Swift::String
-  public static let sdkDescription: Swift::String
-  public static let platform: Swift::String
   public static let requiredCoreAPISDKVersion: Swift::String
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class UPIManager : ObjectiveC::NSObject {
