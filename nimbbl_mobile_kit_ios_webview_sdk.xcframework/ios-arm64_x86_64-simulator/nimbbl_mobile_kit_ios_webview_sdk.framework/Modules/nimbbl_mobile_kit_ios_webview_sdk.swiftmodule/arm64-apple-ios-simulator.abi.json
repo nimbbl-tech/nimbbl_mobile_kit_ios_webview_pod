@@ -13105,14 +13105,14 @@
       "kind": "StringLiteral",
       "offset": 519,
       "length": 15,
-      "value": "\"2.1.0-alpha.3\""
+      "value": "\"2.1.0-alpha.4\""
     },
     {
       "filePath": "\/Users\/sandeepyadav\/Documents\/nimbbl_repos\/client-sdks\/nimbbl_mobile_kit_ios_webview_sdk\/nimbbl_mobile_kit_ios_webview_sdk\/SDKVersion.swift",
       "kind": "StringLiteral",
       "offset": 648,
       "length": 15,
-      "value": "\"2.1.0-alpha.3\""
+      "value": "\"2.1.0-alpha.4\""
     }
   ]
 }
