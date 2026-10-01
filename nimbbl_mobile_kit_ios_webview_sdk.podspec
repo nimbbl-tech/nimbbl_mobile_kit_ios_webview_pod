@@ -1,17 +1,17 @@
 Pod::Spec.new do |spec|
   spec.name           = "nimbbl_mobile_kit_ios_webview_sdk"
 
-  # Single source of truth for the version: version.properties (kept in sync by
-  # the release scripts). The same value is used for the tag, the Package.swift
-  # binaryTarget, and the Core dependency below.
+  # Single source of truth: version.properties (kept in sync by the release
+  # scripts). SDK_VERSION drives this pod's tag + binaryTarget. Core is pinned
+  # SEPARATELY via CORE_API_SDK_VERSION — the WebView and Core SDKs version
+  # independently, so this is NOT assumed equal to spec.version.
   version_file = File.join(File.dirname(__FILE__), 'version.properties')
   fallback_version = "2.0.17"
-  if File.exist?(version_file)
-    m = File.read(version_file).match(/^SDK_VERSION=(.+)$/)
-    spec.version = m ? m[1].strip : fallback_version
-  else
-    spec.version = fallback_version
-  end
+  props = File.exist?(version_file) ? File.read(version_file) : ""
+  sdk_m  = props.match(/^SDK_VERSION=(.+)$/)
+  core_m = props.match(/^CORE_API_SDK_VERSION=(.+)$/)
+  spec.version = sdk_m ? sdk_m[1].strip : fallback_version
+  core_version = core_m ? core_m[1].strip : spec.version   # fallback: lockstep
 
   spec.summary        = "Nimbbl WebView SDK for iOS"
   spec.description    = "WebView SDK for Nimbbl payments, depends on Core API SDK"
@@ -26,8 +26,8 @@ Pod::Spec.new do |spec|
   spec.vendored_frameworks = "nimbbl_mobile_kit_ios_webview_sdk.xcframework"
   spec.static_framework = true
 
-  # Depends on the Core API SDK at the exact same version (mirrors Package.swift).
-  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "#{spec.version}"
+  # Depends on Core at its own pinned version (mirrors Package.swift `exact:`).
+  spec.dependency "nimbbl_mobile_kit_ios_core_api_sdk", "#{core_version}"
   spec.frameworks     = ["Foundation", "UIKit", "WebKit"]
 
   # Enhanced pod target configuration for Flutter compatibility

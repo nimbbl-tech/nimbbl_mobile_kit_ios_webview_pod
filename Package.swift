@@ -30,7 +30,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_core_api_pod.git",
-            exact: "2.1.0-alpha.1"
+            exact: "2.1.0-alpha.2"
         )
     ],
     targets: [
