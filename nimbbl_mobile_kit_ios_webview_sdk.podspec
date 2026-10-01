@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
   spec.description    = "WebView SDK for Nimbbl payments, depends on Core API SDK"
   spec.homepage       = "https://github.com/nimbbl-tech/nimbbl_mobile_kit_ios_webview_pod"
   spec.license        = { :type => 'MIT' }
-  spec.author         = { "Nimbbl" => "support@nimbbl.biz" }
+  spec.author         = { "Nimbbl" => "help@nimbbl.biz" }
   spec.platform       = :ios, "15.0"
   spec.swift_version  = "5.0"
 

@@ -8,3 +8,6 @@
 # Xcode
 xcuserdata/
 DerivedData/
+
+# SPM lockfile (not committed for a library package)
+Package.resolved
